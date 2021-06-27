@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+.beastImage{
+  width: 300px;
+}
+
+.title{
+  font-size: 30px;
+
+}
+
+.description{
+  background-color: lightblue;
+  width: 100px;
+  text-align: center;
+}
