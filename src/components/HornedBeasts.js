@@ -1,17 +1,44 @@
-import React from 'react';
-import '../App.css'
+import React from "react";
+import "../App.css";
+// import Beasts from "./Beasts.json";
+import Card from "react-bootstrap/Card";
 
 
 class HornedBeasts extends React.Component {
-    render() {
-        return(
-            <div>
-                <p className='title'>Title: {this.props.title}</p>
-                <img className='beastImage' src={this.props.imageUrl} alt='hello'></img>
-                <p className='description'>Description: {this.props.description}</p>
-            </div>
-        )
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      numberOfLikes: 0,
+    };
+  }
+
+  increaseNoOfLikes = () => {
+    this.setState({
+      numberOfLikes: this.state.numberOfLikes + 1,
+    });
+  };
+
+  render() {
+    return (
+      <>
+        <Card style={{ width: "18rem" }}>
+          <Card.Img
+            variant="top"
+            onClick={this.increaseNoOfLikes}
+            src={this.props.image_url}
+          />
+          <Card.Body>
+            <Card.Title>{this.props.title}</Card.Title>
+            <Card.Text>❤️ {this.state.numberOfLikes}</Card.Text>
+            <Card.Text>{this.props.description}</Card.Text>
+            {/* <Button variant="primary">Go somewhere</Button> */}
+          </Card.Body>
+        </Card>
+      </>
+    );
+  }
 }
 
 export default HornedBeasts;
+
+
