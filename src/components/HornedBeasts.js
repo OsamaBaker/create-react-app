@@ -2,6 +2,9 @@ import React from "react";
 import "../App.css";
 // import Beasts from "./Beasts.json";
 import Card from "react-bootstrap/Card";
+// import CardGroup from 'react-bootstrap/CardGroup'
+import Button from 'react-bootstrap/Button';
+
 
 
 class HornedBeasts extends React.Component {
@@ -9,6 +12,7 @@ class HornedBeasts extends React.Component {
     super(props);
     this.state = {
       numberOfLikes: 0,
+      showModal: false,
     };
   }
 
@@ -18,6 +22,14 @@ class HornedBeasts extends React.Component {
     });
   };
 
+  clickMe = () =>{
+    this.props.modal({
+        title: this.props.title,
+        image_url: this.props.image_url,
+        description: this.props.description
+    })
+  }
+ 
   render() {
     return (
       <>
@@ -31,7 +43,7 @@ class HornedBeasts extends React.Component {
             <Card.Title>{this.props.title}</Card.Title>
             <Card.Text>❤️ {this.state.numberOfLikes}</Card.Text>
             <Card.Text>{this.props.description}</Card.Text>
-            {/* <Button variant="primary">Go somewhere</Button> */}
+            <Button onClick={this.clickMe} variant="primary">Click Me!</Button>
           </Card.Body>
         </Card>
       </>
