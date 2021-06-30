@@ -6,7 +6,6 @@ import Card from "react-bootstrap/Card";
 import Button from 'react-bootstrap/Button';
 
 
-
 class HornedBeasts extends React.Component {
   constructor(props) {
     super(props);
