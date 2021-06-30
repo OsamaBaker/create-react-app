@@ -3,7 +3,6 @@ import HornedBeasts from "./HornedBeasts";
 import "../App.css";
 import HornsForm from "./HornsForm";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Beasts from "./Beasts.json";
 import Form from "react-bootstrap/Form";
 
 class Main extends React.Component {
