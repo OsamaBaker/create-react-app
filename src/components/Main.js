@@ -1,7 +1,6 @@
 import React from "react";
 import HornedBeasts from "./HornedBeasts";
 import "../App.css";
-import HornsForm from "./HornsForm";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Form from "react-bootstrap/Form";
 
@@ -44,7 +43,6 @@ class Main extends React.Component {
             </Form.Control>
           </Form.Group>
         </Form>
-        <HornsForm />
         {this.props.beasts.map((item, index) => {
           return (
             <HornedBeasts
