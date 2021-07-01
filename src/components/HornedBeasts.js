@@ -1,9 +1,8 @@
 import React from "react";
 import "../App.css";
-// import Beasts from "./Beasts.json";
 import Card from "react-bootstrap/Card";
-// import CardGroup from 'react-bootstrap/CardGroup'
 import Button from 'react-bootstrap/Button';
+
 
 
 
