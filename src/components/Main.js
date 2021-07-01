@@ -13,6 +13,7 @@ class Main extends React.Component {
     this.props.filter(value);
   };
 
+  
   render() {
     return (
       <>
