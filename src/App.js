@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Beasts from "./components/Beasts.json";
 import SelectedBeast from "./components/SelectedBeast";
 
+
 class App extends React.Component {
   constructor(props) {
     super(props);
